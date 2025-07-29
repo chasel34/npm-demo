@@ -11,19 +11,19 @@ concurrency:
     cancel-in-progress: true
 
 jobs:
-  ci:
-    runs-on: ubuntu-latest
+    ci:
+        runs-on: ubuntu-latest
 
-    steps:
-        - uses: actions/checkout@v4
+        steps:
+            - uses: actions/checkout@v4
 
-        - name: Use Node.js
-          uses: actions/setup-node@v4
-          with:
-              node-version: '20'
+            - name: Use Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: '20'
 
-        - name: Install deps
-          run: npm i
+            - name: Install deps
+              run: npm i
 
-        - name: Run CI
-          run: npm run ci
+            - name: Run CI
+              run: npm run ci
